@@ -7,8 +7,6 @@
 
 #pragma once
 
-#ifdef TARGET_WIN32
-
 #ifndef _WIN32_WINNT
 #define _WIN32_WINNT _WIN32_WINNT_WIN8
 #endif
@@ -17,6 +15,8 @@
 #include "ofEvents.h"
 
 #include "ofxWin8Touch.h"
+
+#ifdef TARGET_WIN32
 
 static WNDPROC prevWndProc;
 
