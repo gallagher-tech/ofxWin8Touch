@@ -6,6 +6,9 @@
  */
 
 #pragma once
+
+#ifdef TARGET_WIN32
+
 #ifndef _WIN32_WINNT
 #define _WIN32_WINNT _WIN32_WINNT_WIN8
 #endif
@@ -187,3 +190,5 @@ void ofxWin8TouchSetup() {
 
 	prevWndProc = (WNDPROC)SetWindowLongPtr(hwnd, GWLP_WNDPROC, (LONG_PTR)pointerWndProc);
 }
+
+#endif
